@@ -24,16 +24,20 @@
   </head>
   <body>
     <main>
-      <img
-        class="desktop-only"
-        src="images/image-product-desktop.jpg"
-        alt="Image of a Chanel perfume bottle lying on the floor"
-      />
-      <img
-        class="mobile-only"
-        src="images/image-product-mobile.jpg"
-        alt="Image of a Chanel perfume bottle lying on the floor"
-      />
+      <picture>
+        <source
+          media="(min-width: 740px)"
+          srcset="images/image-product-desktop.jpg"
+        />
+        <source
+          media="(max-width: 740px)"
+          srcset="images/image-product-mobile.jpg"
+        />
+        <img
+          src="images/image-product-desktop.jpg"
+          alt="Image of a perfume bottle"
+        />
+      </picture>
       <article>
         <p class="opacity-uppercase">Perfume</p>
         <h1>Gabrielle Essence Eau De Parfum</h1>
@@ -43,11 +47,7 @@
         </p>
         <p><strong>$149.99</strong> <em>$169.99</em></p>
         <button type="button" class="button">
-          <img
-            src="images/icon-cart.svg"
-            alt="small cart icon"
-            class="icon"
-          />Add to Cart
+          <img src="images/icon-cart.svg" alt="" class="icon" />Add to Cart
         </button>
       </article>
     </main>
